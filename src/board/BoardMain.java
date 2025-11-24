@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BoardMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub test to github
+		// TODO Auto-generated method stub test to github2
 		Scanner scan = new Scanner(System.in);
 		BoardInterface manager = new BoardController();
 		
