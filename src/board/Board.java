@@ -1,6 +1,11 @@
 package board;
 
+import java.util.Objects;
+
 public class Board {
+	
+	//equals 를 이용해서 중복검사 할 때 num 만 비교하도록 재정의
+	
 	private int num;
 	private String title;
 	private String writer;
@@ -16,10 +21,32 @@ public class Board {
 		this.regDate = regDate;
 	}
 	
+	// equals 용 객체
+	public Board(int num) {
+		this.num = num;
+	}
+	
 	// getter, setter
 
 	public int getNum() {
 		return num;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(num);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Board other = (Board) obj;
+		return num == other.num;
 	}
 
 	public void setNum(int num) {
