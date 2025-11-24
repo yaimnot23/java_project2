@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BoardController implements BoardInterface {
+	
 
 	private List<Board> list = new ArrayList<>(); // 게시글 저장
 	private int count = 1; // 게시글 번호 자동 생성 변수
